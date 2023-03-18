@@ -3,17 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LinguAI Dashboard</title>
-  <link href="https://unpkg.com/botui@0.3.5/build/botui.min.css" rel="stylesheet">
-  <link href="https://unpkg.com/botui@0.3.5/build/botui-theme-default.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/botui@0.3.0/build/botui.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/botui@0.3.0/build/botui-theme-default.css" />
   <link rel="stylesheet" href="styles.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.14/vue.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/botui@0.3.0/build/botui.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script src="https://unpkg.com/botui@0.3.5/build/botui.min.js"></script>
+  <title>LinguAI Dashboard</title>
 </head>
 <body>
-  <div id="chat-app">
-    <bot-ui></bot-ui>
+  <div id="main-wrapper">
+    <div id="header">
+      <h1>LinguAI</h1>
+    </div>
+    <div id="content">
+      <div id="settings">
+        <h2>Settings</h2>
+        <p>Native language: <span id="nativeLanguage">English</span></p>
+        <p>Target language: <span id="targetLanguage">Spanish</span></p>
+      </div>
+      <div id="chat-wrapper">
+        <bot-ui id="chat-app"></bot-ui>
+      </div>
+    </div>
   </div>
   <script src="main.js"></script>
 </body>
